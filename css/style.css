@@ -16,8 +16,10 @@
     /* colors */
     --back-color: #191C21;
     --back-color-alt: #1E1E20;
-    --first-color: #FFC412;
-    --first-color-alt: #FFB114;
+    --first-color: #00dcc3;
+    --first-color-alt: #00c3ad;
+    --second-color: #918bd7;
+    --second-color-alt: #736acb;
     --white-color: #F2F2F2;
     --white-color-alt: white;
     --shadow-color: hsla(300, 1.33%, 14.71%, 10%);
