@@ -95,7 +95,8 @@ body{
     position: relative;
     color: var(--first-color);
     font-size: var(--font-size-big);
-    letter-spacing: 1px;
+    font-weight: 500;
+    letter-spacing: 2px;
     overflow: hidden;
     cursor: pointer;
     transition: color .4s;
@@ -114,7 +115,7 @@ body{
     left: -55px;
     bottom: 0;
     border-radius: 4px;
-    -webkit-animation: logo 3s ease infinite;
+    -webkit-animation: logo 4s ease infinite;
 }
 
 @keyframes logo {
