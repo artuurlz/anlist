@@ -14,8 +14,8 @@
     --zfixed: 100;
 
     /* colors */
-    --back-color: #0b0d0f;
-    --back-color-alt: #090a0c;
+    --back-color: #090a0c;
+    --back-color-alt: #07090a;
     --first-color: #00dcc3;
     --first-color-alt: #00c3ad;
     --second-color: #918bd7;
@@ -226,7 +226,7 @@ body{
 
 .home_img{
     background: linear-gradient(to left top,
-     rgba(8, 8, 8, .3), var(--back-color-alt));
+     rgba(8, 8, 8, 1), var(--back-color-alt));
     width: 200px;
     justify-self: center;
     padding: 30px;
@@ -269,7 +269,7 @@ body{
 .section_title{
     color: var(--first-color);
     letter-spacing: 2px;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
 }
 
 .adicionar{
@@ -313,7 +313,8 @@ body{
 
 .anime_card{
     position: relative;
-    background: var(--back-color-alt);
+    background: linear-gradient(to left top,
+     rgba(8, 8, 8, 1), var(--back-color-alt));
     padding: 30px;
     border-radius: 1rem;
     text-align: start;
