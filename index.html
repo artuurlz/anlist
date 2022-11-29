@@ -12,6 +12,11 @@
     <title>AnList</title>
 </head>
 <body>
+
+    <div class="subir_button">
+        <a href="#"><i class="ri-arrow-drop-up-line"></i></a>
+    </div>
+
     <header class="header" id="header">
         <nav class="nav container">
             <a href="index.html" class="nav_logo">AnList</a>
@@ -22,7 +27,7 @@
                         <a href="#" class="nav_link">Início</a>
                     </li>
                     <li class="nav_item">
-                        <a href="#" class="nav_link">Animes</a>
+                        <a href="#anime" class="nav_link">Animes</a>
                     </li>
                     <li class="nav_item">
                         <a href="#" class="nav_link entrar">Entrar</a>
@@ -41,14 +46,50 @@
     </header>
 
     <main class="main">
-        <section class="home section">
+        <section class="home section" id="home">
             <div class="home_container container grid">
-                <!-- <img src="img/home-girl.png" alt="home image" class="home_img"> -->
+                <img src="img/home-girl.png" alt="home image" class="home_img">
                 <div class="home_data">
-                    <!-- <h1 class="home_title">Adicione os animes que você já assistiu na sua lista!</h1> -->
-                    <!-- <p class="home_description">É bem prático, basta descer</p> -->
+                    <h1 class="home_title"><b>Adicione</b> os animes que você já assistiu na sua lista!</h1>
+                    <p class="home_description">É bem prático, basta descer</p>
+                </div>
+                <div class="home_button">
+                    <a href="#anime"><i class="ri-arrow-down-circle-fill"></i></a>
                 </div>
             </div>
+        </section>
+
+        <section class="anime section" id="anime">
+            <h1 class="section_title">Animes</h1>
+            <div class="adicionar">
+                <input type="text" placeholder="Adicionar" class="input_adicionar">
+                <button class="button_adicionar"><i class="ri-add-line"></i></button>
+            </div>
+            <article class="anime_container container grid">
+
+                <div class="anime_card">
+                    <img src="img/Sword-Art-Online-Progressive.jpg" alt="anime image" class="anime_card_img">
+                    <div class="anime_card_data">
+                        <h2 class="anime_card_title">Sword Art Online Progressive</h2>
+                        <p class="anime_card_description">
+                            <b>Autor: </b>Reki Kawahara<br>
+                            <b>Data de Lançamento: </b>10 de Março de 2022 (Brasil)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="anime_card">
+                    <img src="img/Sword-Art-Online-Progressive.jpg" alt="anime image" class="anime_card_img">
+                    <div class="anime_card_data">
+                        <h2 class="anime_card_title">Sword Art Online Progressive</h2>
+                        <p class="anime_card_description">
+                            <b>Autor: </b>Reki Kawahara<br>
+                            <b>Data de Lançamento: </b>10 de Março de 2022 (Brasil)
+                        </p>
+                    </div>
+                </div>
+
+            </article>
         </section>
     </main>
     <script src="js/main.js"></script>
