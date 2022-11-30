@@ -17,3 +17,6 @@ if(navClose){
 }
 
 // ANIMAÇÃO SCROLLREVEAL
+
+ScrollReveal().reveal('.home_img', { duration: 2000});
+ScrollReveal().reveal('.home_data', { duration: 2500});
