@@ -8,7 +8,7 @@
     --font-size-normal: .9rem;
     --font-size-big: 1rem;
     --font-size-small: .8rem;
-    --height-size: 3rem;
+    --height-size: 4rem;
 
     /* zfixed */
     --zfixed: 100;
@@ -119,18 +119,6 @@ body{
     bottom: 0;
     border-radius: 4px;
     -webkit-animation: logo 4s ease infinite;
-}
-
-@keyframes logo {
-    0%{
-        left: -55px;
-    }
-    50%{
-        left: 110px;
-    }
-    100%{
-        left: -65px;
-    }
 }
 
 .nav_toggle{
@@ -259,6 +247,7 @@ body{
     color: var(--white-color);
     font-size: var(--font-size-normal);
     letter-spacing: 1px;
+    padding-bottom: 4rem;
 }
 
 /* ANIMES */
@@ -306,7 +295,7 @@ body{
 
 .anime_container{
     padding-top: 4rem;
-    grid-template-columns: 280px;
+    grid-template-columns: 250px;
     justify-content: center;
     row-gap: 5.5rem;
 }
@@ -321,9 +310,14 @@ body{
     box-shadow: 0 0 10px var(--shadow-color);
 }
 
+.anime_card:hover .anime_card_img{
+    transform: translateY(-.2rem);
+}
+
 .anime_card_img{
     border-radius: 1rem;
     box-shadow: 0 0 10px var(--shadow-color);
+    transition: transform .4s;
 }
 
 .anime_card_data{
@@ -347,16 +341,77 @@ body{
 
 
 /* FOOTER */
+.footer{
+    display: flex;
+    width: 100%; height: var(--height-size);
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 7rem;
+}
 
+.footer_title{
+    position: relative;
+    font-size: var(--font-size-small);
+}
+
+.footer_title::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 80%;
+    margin-top: 1px;
+    margin-left: 3px;
+    background: var(--white-color);
+    -webkit-animation: cursortext 1s linear infinite;
+}
+
+.sociais{
+    display: flex;
+    column-gap: 1rem;
+}
+
+.sociais a{
+    color: var(--white-color);
+    font-size: 1.2rem;
+    transition: transform .4s, color .3s;
+}
+
+.sociais a:hover{
+    transform: translateY(-.1rem);
+    color: var(--second-color);
+}
 
 /* ANIMAÇÕES */
+@keyframes logo {
+    0%{
+        left: -55px;
+    }
+    50%{
+        left: 110px;
+    }
+    100%{
+        left: -65px;
+    }
+}
 
+@keyframes cursortext {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .8;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 
 /* SELECTION */
 /* texto normal */
 .home_title::selection,
 .home_description::selection,
-.home_title b::selection{
+.home_title b::selection,
+.footer_title::selection{
     background: var(--white-color);
     color: var(--back-color-alt);
 }
@@ -401,8 +456,78 @@ body{
 }
 
 /* QUEBRAS DE LINHA */
-@media screen and (min-width: 1064px) {
+@media screen and (min-width: 767px) {
+    .nav_list{
+        flex-direction: row;
+        column-gap: 1.5rem;
+    }
+
+    .nav_close, .nav_toggle{
+        display: none;
+    }
+
+    .home_container{
+        justify-content: center;
+        grid-template-columns: 300px 300px;
+        padding-top: 7rem; padding-bottom: 7rem;
+        gap: 4rem;
+    }
+
+    .home_img{
+        width: 300px;
+    }
+
+    .home_data{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: start;
+    }
+
+    .home_title{
+        font-size: calc(var(--font-size-big) + .2rem);
+    }
+
+    .home_description{
+        padding-bottom: 1rem;
+    }
+
+    .home_button{
+        justify-content: start;
+    }
+
+    .anime_container{
+        grid-template-columns: repeat(2, 250px);
+    }
+}
+
+@media screen and (min-width: 969px) {
+    .anime_container{
+        grid-template-columns: repeat(3, 250px);
+    }
+}
+
+@media screen and (min-width: 1094px) {
+    .anime_container{
+        grid-template-columns: repeat(4, 250px);
+    }
+}
+
+@media screen and (min-width: 1164px) {
     .container{
         margin-inline: auto;
+    }
+
+    .anime_container{
+        grid-template-columns: repeat(2, 550px);
+    }
+
+    .anime_card_img{
+        width: 80px;
+    }
+
+    .anime_card{
+        display: flex;
+        justify-content: space-evenly;
     }
 }
