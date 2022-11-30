@@ -1,4 +1,4 @@
 # AnList
 
-Site de Lista de Animes :D
+Site de Lista de Animes :D <br>
 Ainda em andamento...
