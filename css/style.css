@@ -22,7 +22,7 @@
     --second-color-alt: #736acb;
     --white-color: #F2F2F2;
     --white-color-alt: white;
-    --shadow-color: rgba(8, 8, 8, .2);
+    --shadow-color: rgba(8, 8, 8, 0.4);
 }
 
 *{
@@ -181,9 +181,6 @@ body{
     top: 0;
 }
 
-/* MAIN */
-
-
 /* HOME */
 .home{
     position: relative;
@@ -303,7 +300,7 @@ body{
 .anime_card{
     position: relative;
     background: linear-gradient(to left top,
-     rgba(8, 8, 8, 1), var(--back-color-alt));
+     rgba(8, 8, 8, .5), var(--back-color-alt));
     padding: 30px;
     border-radius: 1rem;
     text-align: start;
