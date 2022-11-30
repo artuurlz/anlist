@@ -318,6 +318,7 @@ body{
     border-radius: 1rem;
     box-shadow: 0 0 10px var(--shadow-color);
     transition: transform .4s;
+    user-select: none;
 }
 
 .anime_card_data{
@@ -411,7 +412,11 @@ body{
 .home_title::selection,
 .home_description::selection,
 .home_title b::selection,
-.footer_title::selection{
+.footer_title::selection,
+.anime_card_title::selection,
+.anime_card_description::selection,
+.anime_card_description b::selection,
+.anime_card_description br::selection{
     background: var(--white-color);
     color: var(--back-color-alt);
 }
