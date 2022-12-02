@@ -20,6 +20,8 @@
     --first-color-alt: #00c3ad;
     --second-color: #918bd7;
     --second-color-alt: #736acb;
+    --three-color: #D40D12;
+    --three-color-alt: #94090D;
     --white-color: #F2F2F2;
     --white-color-alt: white;
     --shadow-color: rgba(8, 8, 8, 0.4);
@@ -335,6 +337,24 @@ body{
 
 .anime_card_description b{
     color: var(--second-color-alt);
+}
+
+.anime_card i{
+    position: absolute;
+    top: -8px; right: -8px;
+    display: flex;
+    justify-content: center; align-items: center;
+    padding: 4px;
+    color: var(--back-color);
+    background: var(--three-color);
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.anime_card i:hover{
+    background: var(--three-color-alt);
 }
 
 
