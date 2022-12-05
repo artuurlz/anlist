@@ -41,6 +41,7 @@ a{
 html{
     overflow-x: hidden;
     scroll-behavior: smooth;
+    user-select: none;
 }
 
 img{
@@ -259,6 +260,58 @@ body{
 
 .button_entrar:hover{
     background: var(--second-color-alt);
+}
+
+/* FOOTER */
+.footer{
+    position: absolute;
+    display: flex;
+    width: 100%; height: var(--height-size);
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 7rem;
+    bottom: 0;
+    padding: 20px;
+}
+
+.footer_title{
+    position: relative;
+    font-size: var(--font-size-small);
+}
+
+.footer_title::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 80%;
+    margin-top: 1px;
+    margin-left: 3px;
+    background: var(--white-color);
+    -webkit-animation: cursortext 1s linear infinite;
+}
+
+.footer_description{
+    font-size: var(--font-size-small);
+}
+
+.footer_description a{
+    color: var(--second-color);
+}
+
+.sociais{
+    display: flex;
+    column-gap: 1rem;
+}
+
+.sociais a{
+    color: var(--white-color);
+    font-size: 1.2rem;
+    transition: transform .4s, color .3s;
+}
+
+.sociais a:hover{
+    transform: translateY(-.1rem);
+    color: var(--second-color);
 }
 
 /* ANIMAÇÕES */

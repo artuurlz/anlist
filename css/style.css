@@ -361,10 +361,11 @@ body{
 /* FOOTER */
 .footer{
     display: flex;
-    width: 100%; height: var(--height-size);
-    justify-content: space-around;
+    width: 100%; height: calc(var(--height-size) + 2rem);
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 7rem;
+    padding: 20px;
 }
 
 .footer_title{
@@ -381,6 +382,14 @@ body{
     margin-left: 3px;
     background: var(--white-color);
     -webkit-animation: cursortext 1s linear infinite;
+}
+
+.footer_description{
+    font-size: var(--font-size-small);
+}
+
+.footer_description a{
+    color: var(--second-color);
 }
 
 .sociais{
@@ -434,7 +443,9 @@ body{
 .anime_card_description::selection,
 .anime_card_description b::selection,
 .anime_card_description br::selection,
-.input_adicionar::selection{
+.input_adicionar::selection,
+.footer_description::selection,
+.footer_description a::selection{
     background: var(--white-color);
     color: var(--back-color-alt);
 }
@@ -552,5 +563,11 @@ body{
     .anime_card{
         display: flex;
         justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .subir_button{
+        bottom: 5rem;
     }
 }
