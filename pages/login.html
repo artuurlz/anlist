@@ -7,7 +7,7 @@
     <meta name="author" content="artuurlz">
     <meta name="description" content="Adicione os animes que você já assistiu pra não se perder!">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>AnList - Entrar</title>
@@ -38,6 +38,22 @@
             </div>
         </nav>
     </header>
+
+    <main class="main">
+        <section class="login_container">
+            <form action="" method="post" class="form_box">
+                <label for="input-email" class="form_title">Email</label>
+                <input type="email" name="email" id="input-email" placeholder="Email" class="input_email">
+                <label for="input-password" class="form_title">Senha</label>
+                <input type="password" name="password" id="input-password" placeholder="Senha" class="input_password">
+                <div class="form_links">
+                    <a href="#" class="esqueceu_senha">Esqueceu a senha?</a>
+                <a href="#" class="criar_conta">Criar Conta</a>
+                </div>
+                <input type="submit" value="Entrar" class="input_entrar" id="input-entrar">
+            </form>
+        </section>
+    </main>
 
     <script src="../js/main.js"></script>
 </body>

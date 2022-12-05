@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    /* font */
+    --font-normal: 'Poppins', sans-serif;
+
+    /* size */
+    --font-size-normal: .9rem;
+    --font-size-big: 1rem;
+    --font-size-small: .8rem;
+    --height-size: 4rem;
+
+    /* zfixed */
+    --zfixed: 100;
+
+    /* colors */
+    --back-color: #090a0c;
+    --back-color-alt: #07090a;
+    --first-color: #00dcc3;
+    --first-color-alt: #00c3ad;
+    --second-color: #918bd7;
+    --second-color-alt: #736acb;
+    --three-color: #D40D12;
+    --three-color-alt: #94090D;
+    --white-color: #F2F2F2;
+    --white-color-alt: white;
+    --shadow-color: rgba(8, 8, 8, 0.4);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-normal);
+}
+
+a{
+    text-decoration: none;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    max-width: 1064px;
+    margin-inline: 1.5rem;
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section{
+    padding-block: 5rem 1rem;
+}
+
+body{
+    position: relative;
+    width: 100%; min-height: 100vh;
+    background-color: var(--back-color);
+    font-size: var(--font-size-normal);
+    font-weight: 100;
+    color: var(--white-color);
+    letter-spacing: 1px;
+}
+
+/* HEADER  */
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0; left: 0;
+    background-color: var(--back-color);
+    z-index: var(--zfixed);
+}
+
+.nav{
+    position: relative;
+    display: flex;
+    height: var(--height-size);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_logo, .nav_close, .nav_toggle{
+    display: flex;
+}
+
+.nav_logo{
+    position: relative;
+    color: var(--first-color);
+    font-size: var(--font-size-big);
+    font-weight: 600;
+    letter-spacing: 2px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color .4s;
+}
+
+.nav_logo:hover{
+    color: var(--first-color-alt);
+}
+
+.nav_logo::after{
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 2px;
+    background: var(--first-color);
+    left: -55px;
+    bottom: 0;
+    border-radius: 4px;
+    -webkit-animation: logo 4s ease infinite;
+}
+
+.nav_toggle{
+    font-size: 1.2rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px){
+    .nav_menu{
+        position: fixed;
+        width: 100%;
+        top: -100%; left: 0;
+        padding-block: 3rem;
+        background: var(--back-color);
+        box-shadow: 0 8px 20px var(--shadow-color);
+        transition: top .5s;
+    }
+}
+
+.nav_list{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1.5rem;
+}
+
+.nav_link{
+    color: var(--white-color);
+    letter-spacing: 1px;
+    font-size: var(--font-size-normal);
+    transition: color .3s;
+}
+
+.nav_close{
+    position: absolute;
+    right: 1.5rem; top: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--white-color);
+    transition: color .3s;
+    cursor: pointer;
+}
+
+.nav_link:hover,
+.nav_close:hover{
+    color: var(--white-color-alt);
+}
+
+.entrar{
+    color: var(--first-color);
+    transition: color .3s;
+}
+
+.entrar:hover{
+    color: var(--first-color-alt);
+}
+
+/* MOSTRAR MENU */
+.nav-show{
+    top: 0;
+}
+
+/* LOGIN */
+.login_container{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; height: 300px;
+    background: transparent;
+    z-index: var(--zfixed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; height: 100%;
+}
+
+.form_title{
+    font-size: var(--font-size-big);
+    color: var(--first-color);
+    padding: 20px 0 4px 0;
+}
+
+.input_email, .input_password{
+    position: relative;
+    padding: 10px;
+    border-radius: .5rem;
+    outline: none; border: 1px solid var(--first-color);
+    background: var(--back-color);
+    color: var(--first-color);
+    font-size: var(--font-normal);
+}
+
+.input_email:focus, .input_password:focus{
+    background: var(--first-color);
+    color: var(--back-color);
+}
+
+.input_email::selection, .input_password::selection{
+    background: var(--back-color-alt);
+    color: var(--white-color);
+}
+
+.form_links{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 20px 0;
+}
+
+.form_links a{
+    color: var(--second-color);
+    transition: color .3s;
+}
+
+.form_links a:hover{
+    color: var(--white-color);
+}
+
+.esqueceu_senha, .criar_conta{
+    font-size: var(--font-size-small);
+}
+
+.input_entrar{
+    padding: 10px;
+    background: var(--second-color);
+    border: none;
+    border-radius: .5rem;
+    color: var(--back-color);
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background .4s;
+}
+
+.input_entrar:hover{
+    background: var(--second-color-alt);
+}
+
+/* ANIMAÇÕES */
+@keyframes logo {
+    0%{
+        left: -55px;
+    }
+    50%{
+        left: 110px;
+    }
+    100%{
+        left: -65px;
+    }
+}
+
+@keyframes cursortext {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .8;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/* QUEBRAS DE LINHA */
+@media screen and (min-width: 767px) {
+    .nav_list{
+        flex-direction: row;
+        column-gap: 1.5rem;
+    }
+
+    .nav_close, .nav_toggle{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1164px) {
+    .container{
+        margin-inline: auto;
+    }
+}
