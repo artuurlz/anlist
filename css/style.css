@@ -341,7 +341,7 @@ body{
 
 .anime_card i{
     position: absolute;
-    top: -8px; right: -8px;
+    top: 1rem; left: 1rem;
     display: flex;
     justify-content: center; align-items: center;
     padding: 4px;
