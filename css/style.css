@@ -433,7 +433,8 @@ body{
 .anime_card_title::selection,
 .anime_card_description::selection,
 .anime_card_description b::selection,
-.anime_card_description br::selection{
+.anime_card_description br::selection,
+.input_adicionar::selection{
     background: var(--white-color);
     color: var(--back-color-alt);
 }

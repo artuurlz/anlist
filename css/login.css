@@ -221,11 +221,6 @@ body{
     font-size: var(--font-normal);
 }
 
-.input_email:focus, .input_password:focus{
-    background: var(--first-color);
-    color: var(--back-color);
-}
-
 .input_email::selection, .input_password::selection{
     background: var(--back-color-alt);
     color: var(--white-color);
@@ -250,7 +245,7 @@ body{
     font-size: var(--font-size-small);
 }
 
-.input_entrar{
+.button_entrar{
     padding: 10px;
     background: var(--second-color);
     border: none;
@@ -262,7 +257,7 @@ body{
     transition: background .4s;
 }
 
-.input_entrar:hover{
+.button_entrar:hover{
     background: var(--second-color-alt);
 }
 
